@@ -112,18 +112,18 @@ export default function UploadMemoriesStep({
       
       {/* Step Context banner */}
       <div className="p-4 bg-[#111A3A]/45 border border-[#D4AF37]/15 rounded-xl">
-        <h4 className="text-sm font-semibold text-[#D4AF37] uppercase tracking-wider mb-1 flex items-center gap-1.5">
+        <h4 className="text-body-sm-bold text-[#D4AF37] uppercase tracking-wider mb-1 flex items-center gap-1.5">
           <Sparkles className="w-3.5 h-3.5" />
           Step 2: Upload Files & Memory Scripts
         </h4>
-        <p className="text-xs text-gray-400 font-light leading-relaxed">
+        <p className="text-body-sm text-gray-400 font-light leading-relaxed">
           Type down precious experiences using standard digital texts or attach archives. Attached documents are sealed inside IPFS blocks with cryptographic wrappers on sealing confirmation.
         </p>
       </div>
 
       {/* Memory Text input */}
       <div className="space-y-2">
-        <label className="block text-xs font-mono font-medium tracking-widest text-[#D4AF37] uppercase">
+        <label className="block text-body-sm-bold font-mono tracking-widest text-[#D4AF37] uppercase">
           Option A: Core Memory Narrative Text
         </label>
         <textarea
@@ -131,14 +131,14 @@ export default function UploadMemoriesStep({
           placeholder="Type down accounts, diary logs, advice, or wisdom vectors for your chosen heir..."
           value={memoryText}
           onChange={(e) => setMemoryText(e.target.value)}
-          className="block w-full px-4 py-3 bg-[#0A0F24]/80 border border-[#D4AF37]/15 rounded-lg text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-[#D4AF37]/60 font-light leading-relaxed resize-none"
+          className="block w-full px-4 py-3 bg-[#0A0F24]/80 border border-[#D4AF37]/15 rounded-lg text-body-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-[#D4AF37]/60 font-light leading-relaxed resize-none"
           id="textarea-memory-text"
         />
       </div>
 
       {/* Attachments Section */}
       <div className="space-y-2">
-        <label className="block text-xs font-mono font-medium tracking-widest text-[#D4AF37] uppercase">
+        <label className="block text-body-sm-bold font-mono tracking-widest text-[#D4AF37] uppercase">
           Option B: Upload Memory Files (Text, PDF, Image, Audio, Video)
         </label>
 
@@ -166,18 +166,18 @@ export default function UploadMemoriesStep({
           
           <UploadCloud className="w-10 h-10 text-gray-400 mb-3 group-hover:scale-105 transition-transform" />
           
-          <span className="text-xs font-semibold text-[#D4AF37] uppercase tracking-wider mb-1">
+          <span className="text-body-sm-bold text-[#D4AF37] uppercase tracking-wider mb-1">
             Drag & Drop Files Here or Click to Browse
           </span>
           
-          <span className="text-[10px] text-gray-500 font-mono mt-2">
+          <span className="text-caption text-gray-400 font-mono mt-2">
             MAX SIZE: 100MB per file
           </span>
 
           {/* Supported tags display */}
           <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 mt-5 max-w-lg">
             {SUPPORTED_LABELS.map((item, idx) => (
-              <span key={idx} className="px-2 py-0.5 bg-[#111A3A]/44 border border-[#D4AF37]/10 text-gray-400 rounded text-[9px] font-mono whitespace-nowrap">
+              <span key={idx} className="px-2 py-0.5 bg-[#111A3A]/44 border border-[#D4AF37]/10 text-gray-400 rounded text-caption font-mono whitespace-nowrap">
                 {item.label} ({item.ext})
               </span>
             ))}
@@ -187,14 +187,14 @@ export default function UploadMemoriesStep({
 
       {/* Simulated Sample Attachments Generator (To facilitate testing easily on the web) */}
       <div className="space-y-2 pt-2 border-t border-[#D4AF37]/10">
-        <span className="block text-[10px] font-mono tracking-widest text-gray-400 uppercase">
+        <span className="block text-caption font-mono tracking-widest text-gray-400 uppercase">
           Quick Demo Presets (Click to Auto-Attach):
         </span>
         <div className="flex flex-wrap gap-2">
           <button 
             type="button"
             onClick={() => addSimulatedSample("Will_And_Testament.pdf", "application/pdf", 1420500)}
-            className="px-2.5 py-1 text-[10px] font-mono bg-[#111A3A]/50 border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 rounded text-gray-300 hover:text-white transition-colors cursor-pointer"
+            className="px-2.5 py-1 text-caption font-mono bg-[#111A3A]/50 border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 rounded text-gray-300 hover:text-white transition-colors cursor-pointer"
             id="preset-attach-pdf"
           >
             + Will_And_Testament.pdf (1.4 MB)
@@ -202,7 +202,7 @@ export default function UploadMemoriesStep({
           <button 
             type="button"
             onClick={() => addSimulatedSample("Family_Archives_1998.jpg", "image/jpeg", 2390800)}
-            className="px-2.5 py-1 text-[10px] font-mono bg-[#111A3A]/50 border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 rounded text-gray-300 hover:text-white transition-colors cursor-pointer"
+            className="px-2.5 py-1 text-caption font-mono bg-[#111A3A]/50 border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 rounded text-gray-300 hover:text-white transition-colors cursor-pointer"
             id="preset-attach-jpg"
           >
             + Family_Archives_1998.jpg (2.3 MB)
@@ -210,7 +210,7 @@ export default function UploadMemoriesStep({
           <button 
             type="button"
             onClick={() => addSimulatedSample("Grandpa_Voice_Note.mp3", "audio/mpeg", 7512400)}
-            className="px-2.5 py-1 text-[10px] font-mono bg-[#111A3A]/50 border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 rounded text-gray-300 hover:text-white transition-colors cursor-pointer"
+            className="px-2.5 py-1 text-caption font-mono bg-[#111A3A]/50 border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 rounded text-gray-300 hover:text-white transition-colors cursor-pointer"
             id="preset-attach-mp3"
           >
             + Grandpa_Voice_Note.mp3 (7.5 MB)
@@ -221,7 +221,7 @@ export default function UploadMemoriesStep({
       {/* Attached Files List Preview (Dynamic state) */}
       {attachments.length > 0 && (
         <div className="space-y-3 pt-4 border-t border-[#D4AF37]/15" id="attachments-preview-list">
-          <span className="block text-xs font-mono font-medium tracking-widest text-[#D4AF37] uppercase">
+          <span className="block text-body-sm-bold font-mono tracking-widest text-[#D4AF37] uppercase">
             Queued Files Preview Block ({attachments.length})
           </span>
 
@@ -238,10 +238,10 @@ export default function UploadMemoriesStep({
                       <FileAvatar className="w-4 h-4" />
                     </div>
                     <div className="truncate flex flex-col text-left">
-                      <span className="text-xs font-medium text-gray-200 truncate font-mono" title={file.name}>
+                      <span className="text-body-sm text-gray-200 truncate font-mono" title={file.name}>
                         {file.name}
                       </span>
-                      <span className="text-[9px] text-gray-500 font-mono tracking-wider uppercase mt-0.5">
+                      <span className="text-caption text-gray-500 font-mono tracking-wider uppercase mt-0.5">
                         {file.type ? file.type.split('/')[1] || file.type : 'binary'} • {formatSize(file.size)}
                       </span>
                     </div>

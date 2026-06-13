@@ -53,10 +53,10 @@ export default function Dashboard({
         {/* Welcome Section */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-12 border-b border-[#D4AF37]/10 pb-8">
           <div>
-            <h2 className="text-2xl md:text-3xl font-display font-light text-gray-100 tracking-wider">
+            <h2 className="text-heading-md font-display font-light text-gray-100 tracking-wider">
               WELCOME, <span className="text-[#D4AF37] font-semibold uppercase">{userName}</span>
             </h2>
-            <p className="text-xs text-gray-400 font-mono uppercase tracking-widest mt-1.5 flex items-center gap-1.5">
+            <p className="text-caption text-gray-400 font-mono uppercase tracking-widest mt-1.5 flex items-center gap-1.5">
               <FolderLock className="w-3.5 h-3.5 text-[#D4AF37]" />
               Secured Decentralized Sanctuary Vault
             </p>
@@ -64,7 +64,7 @@ export default function Dashboard({
 
           <button
             onClick={onOpenWizard}
-            className="flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-[#e7cd70] to-[#b89020] text-black font-semibold text-xs uppercase tracking-widest hover:brightness-110 shadow-[0_0_20px_rgba(212,175,55,0.2)] rounded-lg transition-all duration-300 transform active:scale-95 cursor-pointer"
+            className="flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-[#e7cd70] to-[#b89020] text-black tracking-widest text-button-md uppercase rounded-lg transition-all duration-300 transform active:scale-95 cursor-pointer"
             id="btn-create-capsule"
           >
             <Plus className="w-4 h-4 ml-[-4px]" strokeWidth={2.5} />
@@ -76,15 +76,15 @@ export default function Dashboard({
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
           
           <div className="bg-[#111A3A]/40 border border-emerald-500/15 rounded-xl p-5 hover:border-emerald-500/35 transition-all">
-            <div className="text-[10px] font-mono text-gray-400 tracking-widest uppercase mb-1">SEALED CAPSULES</div>
-            <div className="text-3xl font-mono font-bold text-emerald-400">{sealedCount}</div>
-            <div className="text-[10px] text-emerald-500/75 font-mono uppercase mt-2">CRYPTOGRAPHICALLY SEALED FILESETS</div>
+            <div className="text-caption font-mono text-gray-400 tracking-widest uppercase mb-1">SEALED CAPSULES</div>
+            <div className="text-heading-md font-mono font-bold text-emerald-400">{sealedCount}</div>
+            <div className="text-caption text-emerald-500/75 font-mono uppercase mt-2">CRYPTOGRAPHICALLY SEALED FILESETS</div>
           </div>
 
           <div className="bg-[#111A3A]/40 border border-amber-500/15 rounded-xl p-5 hover:border-amber-500/35 transition-all">
-            <div className="text-[10px] font-mono text-gray-400 tracking-widest uppercase mb-1">ACTIVE DRAFTS</div>
-            <div className="text-3xl font-mono font-bold text-amber-400">{draftCount}</div>
-            <div className="text-[10px] text-amber-500/75 font-mono uppercase mt-2">UNSEALED TEMPORARY DRAFTS</div>
+            <div className="text-caption font-mono text-gray-400 tracking-widest uppercase mb-1">ACTIVE DRAFTS</div>
+            <div className="text-heading-md font-mono font-bold text-amber-400">{draftCount}</div>
+            <div className="text-caption text-amber-500/75 font-mono uppercase mt-2">UNSEALED TEMPORARY DRAFTS</div>
           </div>
 
         </div>
@@ -96,7 +96,7 @@ export default function Dashboard({
           <div className="flex items-center gap-1 bg-[#111A3A]/60 border border-[#D4AF37]/10 p-1 rounded-lg">
             <button
               onClick={() => setFilter("all")}
-              className={`px-4 py-1.5 rounded text-xs font-mono uppercase tracking-wider transition-all duration-300 cursor-pointer ${
+              className={`px-4 py-1.5 rounded text-button-md font-mono uppercase tracking-wider transition-all duration-300 cursor-pointer ${
                 filter === "all" ? "bg-[#D4AF37] text-black font-bold" : "text-gray-400 hover:text-white"
               }`}
               id="filter-all"
@@ -105,7 +105,7 @@ export default function Dashboard({
             </button>
             <button
               onClick={() => setFilter("sealed")}
-              className={`px-4 py-1.5 rounded text-xs font-mono uppercase tracking-wider transition-all duration-300 cursor-pointer ${
+              className={`px-4 py-1.5 rounded text-button-md font-mono uppercase tracking-wider transition-all duration-300 cursor-pointer ${
                 filter === "sealed" ? "bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/30" : "text-gray-400 hover:text-white"
               }`}
               id="filter-sealed"
@@ -114,7 +114,7 @@ export default function Dashboard({
             </button>
             <button
               onClick={() => setFilter("draft")}
-              className={`px-4 py-1.5 rounded text-xs font-mono uppercase tracking-wider transition-all duration-300 cursor-pointer ${
+              className={`px-4 py-1.5 rounded text-button-md font-mono uppercase tracking-wider transition-all duration-300 cursor-pointer ${
                 filter === "draft" ? "bg-amber-500/20 text-amber-300 font-bold border border-amber-500/30" : "text-gray-400 hover:text-white"
               }`}
               id="filter-draft"
@@ -130,7 +130,7 @@ export default function Dashboard({
               placeholder="Search capsules..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-4 py-2 bg-[#111A3A]/40 border border-[#D4AF37]/15 rounded-lg text-xs font-mono text-gray-200 placeholder-gray-500 focus:outline-none focus:border-[#D4AF37]/50"
+              className="w-full px-4 py-2 bg-[#111A3A]/40 border border-[#D4AF37]/15 rounded-lg text-body-sm font-mono text-gray-200 placeholder-gray-500 focus:outline-none focus:border-[#D4AF37]/50"
               id="capsule-search"
             />
           </div>
@@ -155,17 +155,17 @@ export default function Dashboard({
               <Database className="w-10 h-10 animate-pulse" />
             </div>
             
-            <h3 className="text-lg font-bold text-gray-200 uppercase tracking-widest mb-2">
+            <h3 className="text-subtitle-lg font-bold text-gray-200 uppercase tracking-widest mb-2 font-mono">
               No memory capsules yet.
             </h3>
             
-            <p className="text-xs text-gray-400 max-w-sm mb-8 leading-relaxed">
+            <p className="text-body-sm text-gray-400 max-w-sm mb-8 leading-relaxed">
               Maya, your personal memory vault in the EternalMind network is vacant. Initialize a secure container to protect files and texts for your designated heir.
             </p>
 
             <button
               onClick={onOpenWizard}
-              className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#e7cd70] to-[#b89020] text-black font-semibold text-xs uppercase tracking-widest hover:brightness-110 shadow-[0_0_20px_rgba(212,175,55,0.15)] rounded-lg transition-transform duration-300 active:scale-95 cursor-pointer"
+              className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#e7cd70] to-[#b89020] text-black font-semibold text-button-md uppercase tracking-widest hover:brightness-110 shadow-[0_0_20px_rgba(212,175,55,0.15)] rounded-lg transition-transform duration-300 active:scale-95 cursor-pointer"
               id="empty-state-cta"
             >
               <Sparkles className="w-3.5 h-3.5" />

@@ -181,14 +181,14 @@ export default function CapsuleWizard({
         <div className="flex justify-between items-center mb-8 border-b border-[#D4AF37]/10 pb-6">
           <button
             onClick={onCloseWizard}
-            className="flex items-center gap-2 text-xs font-mono text-gray-400 hover:text-[#D4AF37] transition-colors tracking-widest uppercase cursor-pointer group"
+            className="flex items-center gap-2 text-button-md font-mono text-gray-400 hover:text-[#D4AF37] transition-colors tracking-widest uppercase cursor-pointer group"
             id="wizard-btn-close-and-exit"
           >
             <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform" />
             <span>Cancel and Exit Wizard</span>
           </button>
           
-          <span className="text-[10px] font-mono tracking-widest text-[#D4AF37]/80 uppercase">
+          <span className="text-caption font-mono tracking-widest text-[#D4AF37]/80 uppercase">
             ETERNALMIND SECURE WIZARD // STEP {currentStep}/5
           </span>
         </div>
@@ -253,7 +253,7 @@ export default function CapsuleWizard({
 
           {/* Validation Alert for standalone error indicators (Step 2 doesn't have local inline label) */}
           {error && currentStep === 2 && (
-            <div className="flex items-start gap-2.5 p-3.5 bg-amber-500/10 border border-amber-500/30 text-amber-400 rounded-lg text-xs leading-relaxed font-mono mt-6">
+            <div className="flex items-start gap-2.5 p-3.5 bg-amber-500/10 border border-amber-500/30 text-amber-400 rounded-lg text-caption leading-relaxed font-mono mt-6">
               <ShieldAlert className="w-4 h-4 mt-0.5 flex-shrink-0" />
               <span>{error}</span>
             </div>
@@ -267,7 +267,7 @@ export default function CapsuleWizard({
           <button
             onClick={handleBack}
             disabled={currentStep === 1}
-            className={`flex items-center gap-1 px-5 py-3 border border-gray-800 rounded-lg text-xs font-mono uppercase tracking-widest transition-all ${
+            className={`flex items-center gap-1 px-5 py-3 border border-gray-800 rounded-lg text-button-md font-mono uppercase tracking-widest transition-all ${
               currentStep === 1 
                 ? 'opacity-30 cursor-not-allowed text-gray-600' 
                 : 'text-gray-300 hover:text-white hover:bg-[#111A3A]/40'
@@ -281,7 +281,7 @@ export default function CapsuleWizard({
           {currentStep < 5 ? (
             <button
               onClick={handleNext}
-              className="flex items-center gap-1 px-8 py-3 bg-[#111A3A] hover:bg-[#D4AF37]/15 border border-[#D4AF37]/40 hover:border-[#D4AF37]/80 text-[#D4AF37] hover:text-white font-mono text-xs uppercase tracking-widest rounded-lg shadow-md transition-all cursor-pointer"
+              className="flex items-center gap-1 px-8 py-3 bg-[#111A3A] hover:bg-[#D4AF37]/15 border border-[#D4AF37]/40 hover:border-[#D4AF37]/80 text-[#D4AF37] hover:text-white font-mono text-button-md uppercase tracking-widest rounded-lg shadow-md transition-all cursor-pointer"
               id="wizard-btn-next"
             >
               <span>Next Step</span>
@@ -290,7 +290,7 @@ export default function CapsuleWizard({
           ) : (
             <button
               onClick={() => setIsConfirmOpen(true)}
-              className="flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-[#e7cd70] to-[#b89020] text-black font-semibold uppercase tracking-widest text-xs rounded-lg hover:brightness-110 shadow-[0_0_20px_rgba(212,175,55,0.25)] transition-all cursor-pointer"
+              className="flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-[#e7cd70] to-[#b89020] text-black font-bold uppercase tracking-widest text-button-md rounded-lg hover:brightness-110 shadow-[0_0_20px_rgba(212,175,55,0.25)] transition-all cursor-pointer"
               id="wizard-btn-seal-capsule"
             >
               <span>Seal Memory Capsule</span>

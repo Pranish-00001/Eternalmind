@@ -167,10 +167,10 @@ export default function Navbar({
               </div>
 
               <div className="hidden md:flex flex-col items-start text-left max-w-[120px]">
-                <span className="text-[9px] text-[#D4AF37] font-mono tracking-widest font-semibold uppercase leading-none">
-                  RESIDENT
+                <span className="text-caption text-[#D4AF37] font-mono tracking-widest font-semibold uppercase leading-none">
+                  USER
                 </span>
-                <span className="text-xs text-gray-300 font-light truncate w-full mt-0.5">
+                <span className="text-body-sm text-gray-300 font-light truncate w-full mt-0.5">
                   {user.email.split('@')[0]}
                 </span>
               </div>
@@ -188,26 +188,12 @@ export default function Navbar({
                     </div>
                   </div>
                   <div className="overflow-hidden">
-                    <div className="text-[10px] text-[#D4AF37] font-mono tracking-widest uppercase">
-                      SECURED RESIDENT
+                    <div className="text-caption text-[#D4AF37] font-mono tracking-widest uppercase">
+                      SECURED USER
                     </div>
-                    <div className="text-xs text-gray-300 font-light truncate" title={user.email}>
+                    <div className="text-body-sm text-gray-300 font-light truncate" title={user.email}>
                       {user.email}
                     </div>
-                  </div>
-                </div>
-
-                {/* Cyberpunk metadata */}
-                <div className="space-y-1.5 mb-4 p-2.5 bg-[#0e152d]/80 border border-[#D4AF37]/10 rounded-lg">
-                  <div className="flex justify-between items-center text-[10px] font-mono">
-                    <span className="text-gray-500">SESSION AUTH:</span>
-                    <span className="text-emerald-400 flex items-center gap-1">
-                      <Shield className="w-2.5 h-2.5" /> ACTIVE
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center text-[10px] font-mono">
-                    <span className="text-gray-500">VAULT LAYER:</span>
-                    <span className="text-[#D4AF37] uppercase">CRYPTOGRAPHIC</span>
                   </div>
                 </div>
 
@@ -218,7 +204,7 @@ export default function Navbar({
                       setIsDropdownOpen(false);
                       if (onNavigateHome) onNavigateHome();
                     }}
-                    className="w-full flex items-center gap-2 px-2.5 py-2 text-xs text-gray-300 hover:text-white hover:bg-[#D4AF37]/5 rounded-lg transition-colors font-mono cursor-pointer"
+                    className="w-full flex items-center gap-2 px-2.5 py-2 text-button-md text-gray-300 hover:text-white hover:bg-[#D4AF37]/5 rounded-lg transition-colors font-mono cursor-pointer"
                   >
                     <Home className="w-3.5 h-3.5 text-[#D4AF37]" />
                     GO TO HOME VIEW
@@ -229,10 +215,10 @@ export default function Navbar({
                       setIsDropdownOpen(false);
                       if (onNavigateDashboard) onNavigateDashboard();
                     }}
-                    className="w-full flex items-center gap-2 px-2.5 py-2 text-xs text-gray-300 hover:text-white hover:bg-[#D4AF37]/5 rounded-lg transition-colors font-mono cursor-pointer"
+                    className="w-full flex items-center gap-2 px-2.5 py-2 text-button-md text-gray-300 hover:text-white hover:bg-[#D4AF37]/5 rounded-lg transition-colors font-mono cursor-pointer"
                   >
                     <LayoutDashboard className="w-3.5 h-3.5 text-[#D4AF37]" />
-                    SECURE VAULT LIST
+                    SECURE VAULTS
                   </button>
                 </div>
 
@@ -243,10 +229,10 @@ export default function Navbar({
                       setIsDropdownOpen(false);
                       onLogout();
                     }}
-                    className="w-full flex items-center gap-2 px-2.5 py-2 text-xs text-red-400 hover:bg-red-500/10 rounded-lg transition-colors font-mono font-bold cursor-pointer"
+                    className="w-full flex items-center gap-2 px-2.5 py-2 text-button-md text-red-400 hover:bg-red-500/10 rounded-lg transition-colors font-mono font-bold cursor-pointer"
                   >
                     <LogOut className="w-3.5 h-3.5" />
-                    CLOSE CONTAINER
+                    LOG OUT
                   </button>
                 </div>
               </div>

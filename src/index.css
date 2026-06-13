@@ -6,3 +6,75 @@
   --font-display: "Oswald", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
+
+@utility text-hero-display {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1.16;
+  letter-spacing: normal;
+}
+@utility text-display-lg {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.17;
+}
+@utility text-heading-lg {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.28;
+}
+@utility text-heading-md {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.21;
+}
+@utility text-heading-sm {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+@utility text-subtitle-lg {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.44;
+}
+@utility text-subtitle-md {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.44;
+}
+@utility text-body-md {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.50;
+  letter-spacing: -0.16px;
+}
+@utility text-body-md-bold {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.50;
+  letter-spacing: -0.16px;
+}
+@utility text-body-sm {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: -0.14px;
+}
+@utility text-body-sm-bold {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.43;
+  letter-spacing: -0.14px;
+}
+@utility text-caption {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.33;
+}
+@utility text-button-md {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.43;
+  letter-spacing: -0.14px;
+}

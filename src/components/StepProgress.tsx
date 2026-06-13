@@ -57,12 +57,12 @@ export default function StepProgress({ currentStep }: StepProgressProps) {
               </div>
 
               {/* Step label on Desktop */}
-              <span className={`hidden sm:inline text-[10px] font-mono tracking-widest uppercase mt-2.5 transition-colors duration-300 ${textClass}`}>
+              <span className={`hidden sm:inline text-caption font-mono tracking-widest uppercase mt-2.5 transition-colors duration-300 ${textClass}`}>
                 {step.label}
               </span>
 
               {/* Step number strictly for small mobile preview space */}
-              <span className="sm:hidden text-[9px] font-mono mt-1 text-gray-400">
+              <span className="sm:hidden text-caption font-mono mt-1 text-gray-400">
                 S{step.id}
               </span>
 

@@ -85,7 +85,7 @@ export default function ConfirmationModal({
         
         {/* Header Ribbon */}
         <div className="p-5 border-b border-[#D4AF37]/10 flex items-center justify-between">
-          <h3 className="text-sm font-mono tracking-widest font-bold text-[#D4AF37] uppercase flex items-center gap-2">
+          <h3 className="text-body-sm-bold font-mono tracking-widest text-[#D4AF37] uppercase flex items-center gap-2">
             <Fingerprint className="w-4 h-4 animate-pulse" />
             CONFIRM CAPSULE SEALING
           </h3>
@@ -110,12 +110,12 @@ export default function ConfirmationModal({
             <div className="space-y-6 text-left" id="modal-idle-content">
               <div className="p-4 bg-amber-500/10 border border-amber-500/30 text-amber-400 rounded-xl flex items-start gap-3">
                 <AlertTriangle className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                <p className="text-xs font-light leading-relaxed font-sans">
+                <p className="text-body-sm font-light leading-relaxed font-sans">
                   You are about to seal this memory capsule. Your memories will be prepared for secure storage, and your wallet will be asked to sign a blockchain transaction.
                 </p>
               </div>
 
-              <div className="text-xs text-gray-400 font-light space-y-2 Leading-relaxed">
+              <div className="text-caption text-gray-400 font-light space-y-2 leading-relaxed">
                 <p>
                   <strong>Draft Saving Clause:</strong> Clicking cancel or exit preserves this capsule locally as a draft. You'll be returned to your dashboard safely.
                 </p>
@@ -129,7 +129,7 @@ export default function ConfirmationModal({
                 <button
                   type="button"
                   onClick={onClose}
-                  className="flex-1 py-3 border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 font-mono text-xs font-bold uppercase tracking-widest rounded-lg transition-all cursor-pointer flex items-center justify-center gap-2"
+                  className="flex-1 py-3 border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/15 text-amber-400 font-mono text-button-md uppercase tracking-widest rounded-lg transition-all cursor-pointer flex items-center justify-center gap-2"
                   id="modal-btn-draft"
                 >
                   <Bookmark className="w-3.5 h-3.5" />
@@ -138,7 +138,7 @@ export default function ConfirmationModal({
                 <button
                   type="button"
                   onClick={simulateSealTransaction}
-                  className="flex-1 py-3 bg-gradient-to-r from-[#e7cd70] to-[#b89020] text-black font-bold text-xs uppercase tracking-widest rounded-lg hover:brightness-110 shadow-[0_0_15px_rgba(212,175,55,0.2)] transition-all cursor-pointer flex items-center justify-center gap-2"
+                  className="flex-1 py-3 bg-gradient-to-r from-[#e7cd70] to-[#b89020] text-black font-bold text-button-md uppercase tracking-widest rounded-lg hover:brightness-110 shadow-[0_0_15px_rgba(212,175,55,0.2)] transition-all cursor-pointer flex items-center justify-center gap-2"
                   id="modal-btn-seal"
                 >
                   <ShieldCheck className="w-3.5 h-3.5" />
@@ -162,20 +162,20 @@ export default function ConfirmationModal({
                   </div>
                 )}
 
-                <h4 className="text-sm font-mono font-bold tracking-widest text-[#D4AF37] uppercase mt-6">
+                <h4 className="text-body-sm-bold font-mono tracking-widest text-[#D4AF37] uppercase mt-6">
                   {txState === "awaiting_approval" && "Awaiting Wallet Approval..."}
                   {txState === "submitted" && "Transaction Submitted..."}
                   {txState === "confirming" && "Waiting for Network confirmation..."}
                   {txState === "success" && "Capsule Sealed Successfully!"}
                 </h4>
                 
-                <p className="text-[10px] text-gray-500 font-mono uppercase tracking-widest mt-1">
+                <p className="text-caption text-gray-500 font-mono uppercase tracking-widest mt-1">
                   Blockchain State Engine Processing
                 </p>
               </div>
 
               {/* Interactive terminal output logs */}
-              <div className="bg-[#0A0F24]/90 p-4 rounded-xl border border-gray-800 text-left font-mono text-[10px] text-gray-400 h-40 overflow-y-auto space-y-1.5 select-text">
+              <div className="bg-[#0A0F24]/90 p-4 rounded-xl border border-gray-800 text-left font-mono text-caption text-gray-400 h-40 overflow-y-auto space-y-1.5 select-text">
                 <div className="text-sky-400 border-b border-gray-800 pb-1 mb-2">SYSTEM@ETERNALMIND_VAULT_ENGINE // STATUS ACTIVE</div>
                 {progressLog.map((log, index) => (
                   <div key={index} className="flex gap-2 items-start leading-relaxed">

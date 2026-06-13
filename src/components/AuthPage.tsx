@@ -144,7 +144,7 @@ export default function AuthPage({ onAuthSuccess, onBackToLanding, defaultToSign
         {/* Back Link */}
         <button
           onClick={onBackToLanding}
-          className="flex items-center gap-2 text-xs font-mono text-gray-400 hover:text-[#D4AF37] transition-colors mb-8 uppercase tracking-widest cursor-pointer group"
+          className="flex items-center gap-2 text-button-md font-mono text-gray-400 hover:text-[#D4AF37] transition-colors mb-8 uppercase tracking-widest cursor-pointer group"
           id="btn-back-landing"
         >
           <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform" />
@@ -156,10 +156,10 @@ export default function AuthPage({ onAuthSuccess, onBackToLanding, defaultToSign
           <div className="inline-flex items-center justify-center p-3 rounded-full bg-[#111A3A]/60 border border-[#D4AF37]/20 mb-4 shadow-[0_0_15px_rgba(212,175,55,0.08)]">
             <ShieldCheck className="w-8 h-8 text-[#D4AF37]" />
           </div>
-          <h2 className="text-2xl font-display font-medium text-gray-100 tracking-widest uppercase">
+          <h2 className="text-heading-sm font-display font-medium text-gray-100 tracking-widest uppercase">
             {isSignUp ? "CREATE ACCOUNT" : "LOGIN"}
           </h2>
-          <p className="text-xs text-gray-400 font-mono tracking-wider mt-2">
+          <p className="text-caption text-gray-400 font-mono tracking-wider mt-2">
             {isSignUp ? "GENERATE YOUR SECURE VAULT KEYS" : "PROVIDE YOUR LOGIN DETAILS"}
           </p>
         </div>
@@ -171,7 +171,7 @@ export default function AuthPage({ onAuthSuccess, onBackToLanding, defaultToSign
             
             {/* Email Address */}
             <div className="space-y-2">
-              <label className="block text-xs font-mono font-medium tracking-widest text-[#D4AF37] uppercase">
+              <label className="block text-body-sm-bold font-mono tracking-widest text-[#D4AF37] uppercase">
                 Email
               </label>
               <div className="relative">
@@ -184,7 +184,7 @@ export default function AuthPage({ onAuthSuccess, onBackToLanding, defaultToSign
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="name@legacy.com"
-                  className="block w-full pl-10 pr-4 py-3 bg-[#0A0F24]/80 border border-[#D4AF37]/15 rounded-lg text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-[#D4AF37]/60 focus:ring-1 focus:ring-[#D4AF37]/40 transition-all font-mono"
+                  className="block w-full pl-10 pr-4 py-3 bg-[#0A0F24]/80 border border-[#D4AF37]/15 rounded-lg text-body-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-[#D4AF37]/60 focus:ring-1 focus:ring-[#D4AF37]/40 transition-all font-mono"
                   id="auth-email-input"
                 />
               </div>
@@ -192,7 +192,7 @@ export default function AuthPage({ onAuthSuccess, onBackToLanding, defaultToSign
 
             {/* Password */}
             <div className="space-y-2">
-              <label className="block text-xs font-mono font-medium tracking-widest text-[#D4AF37] uppercase">
+              <label className="block text-body-sm-bold font-mono tracking-widest text-[#D4AF37] uppercase">
                 Password
               </label>
               <div className="relative">
@@ -205,7 +205,7 @@ export default function AuthPage({ onAuthSuccess, onBackToLanding, defaultToSign
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
-                  className="block w-full pl-10 pr-4 py-3 bg-[#0A0F24]/80 border border-[#D4AF37]/15 rounded-lg text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-[#D4AF37]/60 focus:ring-1 focus:ring-[#D4AF37]/40 transition-all font-mono"
+                  className="block w-full pl-10 pr-4 py-3 bg-[#0A0F24]/80 border border-[#D4AF37]/15 rounded-lg text-body-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-[#D4AF37]/60 focus:ring-1 focus:ring-[#D4AF37]/40 transition-all font-mono"
                   id="auth-password-input"
                 />
               </div>
@@ -214,7 +214,7 @@ export default function AuthPage({ onAuthSuccess, onBackToLanding, defaultToSign
             {/* Confirm Password (only for Sign Up) */}
             {isSignUp && (
               <div className="space-y-2">
-                <label className="block text-xs font-mono font-medium tracking-widest text-[#D4AF37] uppercase">
+                <label className="block text-body-sm-bold font-mono tracking-widest text-[#D4AF37] uppercase">
                   Confirm Password
                 </label>
                 <div className="relative">
@@ -227,7 +227,7 @@ export default function AuthPage({ onAuthSuccess, onBackToLanding, defaultToSign
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     placeholder="••••••••"
-                    className="block w-full pl-10 pr-4 py-3 bg-[#0A0F24]/80 border border-[#D4AF37]/15 rounded-lg text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-[#D4AF37]/60 focus:ring-1 focus:ring-[#D4AF37]/40 transition-all font-mono"
+                    className="block w-full pl-10 pr-4 py-3 bg-[#0A0F24]/80 border border-[#D4AF37]/15 rounded-lg text-body-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-[#D4AF37]/60 focus:ring-1 focus:ring-[#D4AF37]/40 transition-all font-mono"
                     id="auth-confirm-password-input"
                   />
                 </div>
@@ -244,7 +244,7 @@ export default function AuthPage({ onAuthSuccess, onBackToLanding, defaultToSign
                   className="w-4 h-4 rounded bg-[#0A0F24]/50 border border-[#D4AF37]/30 text-[#D4AF37] focus:ring-0 focus:ring-offset-0 accent-[#D4AF37] cursor-pointer"
                   id="auth-remember-me-checkbox"
                 />
-                <span className="text-xs font-mono tracking-wider text-gray-400 group-hover:text-gray-200 transition-colors">
+                <span className="text-body-sm font-mono tracking-wider text-gray-400 group-hover:text-gray-200 transition-colors">
                   Remember me
                 </span>
               </label>
@@ -252,14 +252,14 @@ export default function AuthPage({ onAuthSuccess, onBackToLanding, defaultToSign
 
             {/* Status alerts */}
             {error && (
-              <div className="flex items-start gap-2.5 p-3.5 bg-red-500/10 border border-red-500/30 text-red-400 rounded-lg text-xs leading-relaxed font-mono">
+              <div className="flex items-start gap-2.5 p-3.5 bg-red-500/10 border border-red-500/30 text-red-400 rounded-lg text-caption leading-relaxed font-mono">
                 <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <span>{error}</span>
               </div>
             )}
 
             {successMsg && (
-              <div className="flex items-start gap-2.5 p-3.5 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 rounded-lg text-xs leading-relaxed font-mono">
+              <div className="flex items-start gap-2.5 p-3.5 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 rounded-lg text-caption leading-relaxed font-mono">
                 <ShieldCheck className="w-4 h-4 mt-0.5 flex-shrink-0 animate-bounce" />
                 <span>{successMsg}</span>
               </div>
@@ -268,7 +268,7 @@ export default function AuthPage({ onAuthSuccess, onBackToLanding, defaultToSign
             {/* Action button */}
             <button
               type="submit"
-              className="w-full py-3.5 bg-gradient-to-r from-[#e7cd70] to-[#b89020] text-black font-semibold uppercase tracking-widest text-xs hover:brightness-110 shadow-[0_0_15px_rgba(212,175,55,0.15)] active:scale-[0.98] transition-all cursor-pointer"
+              className="w-full py-4 bg-gradient-to-r from-[#e7cd70] to-[#b89020] text-black tracking-widest text-button-md hover:brightness-110 shadow-[0_0_15px_rgba(212,175,55,0.15)] active:scale-[0.98] transition-all cursor-pointer uppercase"
               id="auth-submit-btn"
             >
               {isSignUp ? "CREATE ACCOUNT" : "LOGIN"}
@@ -285,7 +285,7 @@ export default function AuthPage({ onAuthSuccess, onBackToLanding, defaultToSign
             <button
               type="button"
               onClick={handleGoogleSignIn}
-              className="w-full py-3.5 bg-[#0a0f24]/50 border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 hover:bg-[#D4AF37]/5 text-gray-200 font-mono text-[11px] uppercase tracking-widest flex items-center justify-center gap-2.5 transition-all cursor-pointer rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_20px_rgba(212,175,55,0.05)] active:scale-[0.98]"
+              className="w-full py-3.5 bg-[#0a0f24]/50 border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 hover:bg-[#D4AF37]/5 text-gray-200 text-button-md font-mono uppercase tracking-widest flex items-center justify-center gap-2.5 transition-all cursor-pointer rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_20px_rgba(212,175,55,0.05)] active:scale-[0.98]"
               id="auth-google-btn"
             >
               <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
@@ -301,7 +301,7 @@ export default function AuthPage({ onAuthSuccess, onBackToLanding, defaultToSign
 
           {/* Tab Switcher link */}
           <div className="mt-8 text-center pt-6 border-t border-[#D4AF37]/10">
-            <p className="text-xs text-gray-400 font-mono">
+            <p className="text-body-sm text-gray-400 font-mono">
               {isSignUp ? "Already have an account?" : "First time?"}
               <button
                 type="button"
@@ -309,7 +309,7 @@ export default function AuthPage({ onAuthSuccess, onBackToLanding, defaultToSign
                   setIsSignUp(!isSignUp);
                   setError('');
                 }}
-                className="text-[#D4AF37] hover:underline uppercase tracking-wide ml-1.5 focus:outline-none font-bold cursor-pointer text-[10px]"
+                className="text-[#D4AF37] hover:underline uppercase tracking-wide ml-1.5 focus:outline-none cursor-pointer text-button-md font-mono"
                 id="btn-toggle-auth-mode"
               >
                 {isSignUp ? "Log in" : "Sign up"}

@@ -52,10 +52,10 @@ export default function SealSecureStep({
       <div className="p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-xl flex items-start gap-3">
         <ShieldCheck className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0 animate-pulse" />
         <div className="space-y-1">
-          <h4 className="text-sm font-semibold text-emerald-400 uppercase tracking-wider">
+          <h4 className="text-body-sm-bold text-emerald-400 uppercase tracking-wider">
             Step 5: Final Integrity Verification
           </h4>
-          <p className="text-xs text-gray-400 font-light leading-relaxed">
+          <p className="text-body-sm text-gray-400 font-light leading-relaxed">
             Verify details below. Upon sealing, memory packages are encrypted end-to-end. Decrypting is locked until the specified release threshold is satisfied.
           </p>
         </div>
@@ -66,17 +66,17 @@ export default function SealSecureStep({
         
         {/* Header Ribbon */}
         <div className="bg-[#D4AF37]/10 border-b border-[#D4AF37]/15 py-3.5 px-6 flex items-center justify-between">
-          <span className="text-[10px] font-mono tracking-[0.3em] text-[#D4AF37] uppercase font-bold flex items-center gap-1.5">
+          <span className="text-caption font-mono tracking-[0.3em] text-[#D4AF37] uppercase font-bold flex items-center gap-1.5">
             <FileCheck2 className="w-4 h-4" />
             Capsule Integrity Summary
           </span>
-          <span className="text-[9px] font-mono text-gray-400 uppercase">
+          <span className="text-caption font-mono text-gray-400 uppercase">
             PROTOCOL: EM_v2.4
           </span>
         </div>
 
         {/* Info Grid split items */}
-        <div className="p-6 md:p-8 space-y-6 font-mono text-xs">
+        <div className="p-6 md:p-8 space-y-6 font-mono text-body-sm">
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
@@ -85,17 +85,17 @@ export default function SealSecureStep({
               
               {/* Owner */}
               <div>
-                <span className="text-[10px] text-gray-500 uppercase tracking-widest block mb-1">REGISTERED OWNER</span>
+                <span className="text-caption text-gray-500 uppercase tracking-widest block mb-1">REGISTERED OWNER</span>
                 <div className="flex items-center gap-2 text-gray-200">
                   <User className="w-4 h-4 text-[#D4AF37] flex-shrink-0" />
-                  <span className="font-sans font-bold text-sm tracking-wide">{ownerName || "Unnamed"}</span>
+                  <span className="font-sans font-bold text-body-sm tracking-wide">{ownerName || "Unnamed"}</span>
                 </div>
               </div>
 
               {/* Wallet */}
               <div>
-                <span className="text-[10px] text-gray-500 uppercase tracking-widest block mb-1">OWNER WALLET SIGNER</span>
-                <div className="flex items-center gap-2 text-gray-300 font-mono text-[11px]">
+                <span className="text-caption text-gray-500 uppercase tracking-widest block mb-1">OWNER WALLET SIGNER</span>
+                <div className="flex items-center gap-2 text-gray-300 font-mono text-caption">
                   <Wallet className="w-4 h-4 text-[#D4AF37] flex-shrink-0" />
                   <span className="truncate" title={walletAddress}>
                     {walletAddress ? `${walletAddress.substring(0, 10)}...${walletAddress.substring(walletAddress.length - 8)}` : "No Wallet Connected"}
@@ -105,10 +105,10 @@ export default function SealSecureStep({
 
               {/* Heir Address */}
               <div>
-                <span className="text-[10px] text-gray-500 uppercase tracking-widest block mb-1">DESIGNATED NEXT-OF-KIN HEIR</span>
+                <span className="text-caption text-gray-500 uppercase tracking-widest block mb-1">DESIGNATED NEXT-OF-KIN HEIR</span>
                 <div className="flex items-center gap-2 text-[#D4AF37]">
                   <Mail className="w-4 h-4 text-[#D4AF37] flex-shrink-0" />
-                  <span className="font-sans text-sm tracking-wide font-medium truncate" title={heirEmail}>{heirEmail || "None Specified"}</span>
+                  <span className="font-sans text-body-sm tracking-wide font-medium truncate" title={heirEmail}>{heirEmail || "None Specified"}</span>
                 </div>
               </div>
 
@@ -119,8 +119,8 @@ export default function SealSecureStep({
               
               {/* Title */}
               <div>
-                <span className="text-[10px] text-gray-500 uppercase tracking-widest block mb-1">TARGET CONTAINER TITLE</span>
-                <div className="flex items-center gap-2 text-gray-200 font-mono font-bold uppercase tracking-wider text-sm truncate" title={title}>
+                <span className="text-caption text-gray-500 uppercase tracking-widest block mb-1">TARGET CONTAINER TITLE</span>
+                <div className="flex items-center gap-2 text-gray-200 font-mono font-bold uppercase tracking-wider text-body-sm truncate" title={title}>
                   <FileText className="w-4 h-4 text-[#D4AF37]" />
                   <span>{title || "Untitled Capsule"}</span>
                 </div>
@@ -128,17 +128,17 @@ export default function SealSecureStep({
 
               {/* Unlock Date */}
               <div>
-                <span className="text-[10px] text-gray-500 uppercase tracking-widest block mb-1">TIMELOCK DECRYPTION RELEASE</span>
+                <span className="text-caption text-gray-500 uppercase tracking-widest block mb-1">TIMELOCK DECRYPTION RELEASE</span>
                 <div className="flex items-center gap-2 text-emerald-400">
                   <Calendar className="w-4 h-4 text-emerald-400" />
-                  <span className="text-sm font-bold">{unlockDate ? new Date(unlockDate).toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : "None Specified"}</span>
+                  <span className="text-body-sm font-bold">{unlockDate ? new Date(unlockDate).toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : "None Specified"}</span>
                 </div>
               </div>
 
               {/* Memory Text & Attachments Metadata check */}
               <div>
-                <span className="text-[10px] text-gray-500 uppercase tracking-widest block mb-1">PAYLOAD COMPONENT BLOCKS</span>
-                <div className="flex flex-col gap-1.5 text-xs text-gray-300 pt-0.5">
+                <span className="text-caption text-gray-500 uppercase tracking-widest block mb-1">PAYLOAD COMPONENT BLOCKS</span>
+                <div className="flex flex-col gap-1.5 text-body-sm text-gray-300 pt-0.5">
                   <div className="flex items-center gap-1.5">
                     <FileText className={`w-3.5 h-3.5 ${memoryText ? 'text-emerald-400' : 'text-gray-600'}`} />
                     <span>Memory text block: {memoryText ? 'YES' : 'NO'}</span>
@@ -156,8 +156,8 @@ export default function SealSecureStep({
 
           {/* Bottom Area: Narrative Description summary */}
           <div className="border-t border-[#D4AF37]/10 pt-4 text-left">
-            <span className="text-[10px] text-gray-500 uppercase tracking-widest block mb-2">Supplement Narrative / Intent Summary</span>
-            <p className="text-gray-300 font-sans font-light leading-relaxed whitespace-pre-line text-xs bg-[#0E152D]/60 p-4 rounded-xl border border-gray-800">
+            <span className="text-caption text-gray-500 uppercase tracking-widest block mb-2">Supplement Narrative / Intent Summary</span>
+            <p className="text-gray-300 font-sans font-light leading-relaxed whitespace-pre-line text-body-sm bg-[#0E152D]/60 p-4 rounded-xl border border-gray-800">
               {description || "No supplemental descriptions entered."}
             </p>
           </div>
